@@ -30,4 +30,15 @@ class Welcome extends Application
 		$this->render();
 	}
 
+    // shuncks method
+    public function shucks()
+    {
+        // this is the view we want shown
+        $this->data['pagebody'] = 'justone';
+        
+        // build the record of authors, to pass on to our view
+		$record  = $this->quotes->get(2);
+		$this->data = array_merge($this->data, $record);        
+		$this->render();
+    }
 }
