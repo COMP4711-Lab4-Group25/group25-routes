@@ -2,9 +2,8 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application
+class Wise extends Application
 {
-
 	function __construct()
 	{
 		parent::__construct();
@@ -29,15 +28,15 @@ class Welcome extends Application
 
 		$this->render();
 	}
-
-    // shuncks method
-    public function shucks()
+    
+    // bingo method
+    public function bingo()
     {
         // this is the view we want shown
         $this->data['pagebody'] = 'justone';
         
         // build the record of authors, to pass on to our view
-		$record  = $this->quotes->get(2);
+		$record  = $this->quotes->get(6);
 		$this->data = array_merge($this->data, $record);        
 		$this->render();
     }
