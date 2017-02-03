@@ -61,3 +61,4 @@ $route['dunno'] = function() {
 	die(); // and we don't have to go any further
 };        
 $route['sleep'] = 'first/zzz';
+$route['([a-z]{4})/bingo'] = 'bingo';
