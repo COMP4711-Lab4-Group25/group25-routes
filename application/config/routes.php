@@ -49,8 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+//$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'hogwarts';
+$route['404_override'] = 'hogwarts/random';
 $route['translate_uri_dashes'] = FALSE;
 $route['dunno'] = function() {
 	$source = '../data/anonymous.jpg'; // an image you provide, outside of "oublic"!
@@ -63,6 +64,6 @@ $route['dunno'] = function() {
 $route['sleep'] = 'first/zzz';
 $route['show/(:num)']= 'first/gimme/$1';
 $route['([a-z]{4})/bingo'] = 'bingo';
-$route['lock/(:any)/(:any)'] = "welcome/shucks";
+$route['lock/(:any)/(:any)'] = "hogwarts/shucks";
 $route['comp(\d+)/(:any)'] = "wise/bingo";
 
